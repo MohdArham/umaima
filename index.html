@@ -1,96 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Umaima 🌈✨</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umaima 🌸✨</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive;
-            background: linear-gradient(135deg, #ffecd2, #fcb69f);
-            text-align: center;
-            overflow: hidden;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
 
-        h1 {
-            margin-top: 80px;
-            font-size: 50px;
-            color: #ff4d6d;
-            animation: bounce 2s infinite;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffd6ec, #d0f4ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
 
-        p {
-            font-size: 22px;
-            color: #444;
-            padding: 20px;
-        }
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.3);
+    max-width: 90%;
+    width: 420px;
+    position: relative;
+    animation: fadeIn 1.5s ease;
+}
 
-        .emoji {
-            font-size: 40px;
-            animation: float 3s ease-in-out infinite;
-        }
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    color: #ff4d8d;
+    margin-bottom: 10px;
+}
 
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 30px;
-            background-color: #ff85a2;
-            color: white;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
 
-        button:hover {
-            background-color: #ff4d6d;
-            transform: scale(1.1);
-        }
+button {
+    background: #ff85a2;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        @keyframes bounce {
-            0%,100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+button:hover {
+    background: #ff4d8d;
+    transform: scale(1.1);
+}
 
-        @keyframes float {
-            0%,100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff006e;
+    display: none;
+    animation: pop 0.6s ease;
+}
 
-        .message {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #ff006e;
-            display: none;
-        }
-    </style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Floating balloons */
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    font-size: 40px;
+    animation: float 10s linear infinite;
+}
+
+.balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+.balloon:nth-child(2) { left: 30%; animation-delay: 3s; }
+.balloon:nth-child(3) { left: 60%; animation-delay: 6s; }
+.balloon:nth-child(4) { left: 80%; animation-delay: 2s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    h1 { font-size: 32px; }
+    .container { padding: 30px 20px; }
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Hi Umaima! 🌸✨</h1>
-
+<div class="container">
+    <h1>Hi Umaima! 🌸</h1>
     <p>
-        You are smart, kind and super amazing! 🌈💖<br>
-        Keep smiling and shining like a star! ⭐
+        You are kind, smart and super amazing! 🌈✨<br>
+        Keep smiling and shining like a bright star! ⭐💖
     </p>
 
-    <div class="emoji">🦄 🌸 🌈 🐰 🎀</div>
-
-    <button onclick="showMessage()">Click Me 💝</button>
+    <button onclick="showMessage()">Click Me 🎀</button>
 
     <div class="message" id="surprise">
-        🎉 You are AWESOME, Umaima! 🎉
+        🎉 You are AWESOME, Umaima! 🎉<br>
+        Never stop being magical! ✨🦄
     </div>
+</div>
 
-    <script>
-        function showMessage() {
-            document.getElementById("surprise").style.display = "block";
-        }
-    </script>
+<div class="balloon">🎈</div>
+<div class="balloon">🎀</div>
+<div class="balloon">🌸</div>
+<div class="balloon">🌈</div>
+
+<script>
+function showMessage() {
+    document.getElementById("surprise").style.display = "block";
+}
+</script>
 
 </body>
 </html>
