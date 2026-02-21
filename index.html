@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Umaima 🌈✨</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 80px;
+            font-size: 50px;
+            color: #ff4d6d;
+            animation: bounce 2s infinite;
+        }
+
+        p {
+            font-size: 22px;
+            color: #444;
+            padding: 20px;
+        }
+
+        .emoji {
+            font-size: 40px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background-color: #ff85a2;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff4d6d;
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes float {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff006e;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hi Umaima! 🌸✨</h1>
+
+    <p>
+        You are smart, kind and super amazing! 🌈💖<br>
+        Keep smiling and shining like a star! ⭐
+    </p>
+
+    <div class="emoji">🦄 🌸 🌈 🐰 🎀</div>
+
+    <button onclick="showMessage()">Click Me 💝</button>
+
+    <div class="message" id="surprise">
+        🎉 You are AWESOME, Umaima! 🎉
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("surprise").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
